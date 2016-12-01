@@ -36,6 +36,23 @@ $('.flexsearch-input').keyup(function(event){
             }
           });
         });
+        //comics too!!
+        $.ajax({
+          dataType: 'json',
+          url: 'http://www.mattbowytz.com/simple_api.json?data=comics',
+          success: function(data){
+            $.each(data.data, function(key3, value2){
+                valueNoCase2 = value2.toLowerCase();
+                if(valueNoCase2.indexOf(current_input) != -1){
+                  output += "<button class=autofill-box onclick=autofill(this) value='"+ value2 + "'>"+ value2 +"</button>";
+                }
+              });
+            $('.autocomplete').html(output);
+          },
+          error: function(){
+            console.log("Error getting api");
+          }
+        });
         $('.autocomplete').html(output);
       },
       error: function(){
