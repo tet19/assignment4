@@ -96,3 +96,28 @@ input:-moz-placeholder {
   line-height: 45px;
   text-align: center;
 }
+h2{
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  margin-top: -30px;
+}
+.autocomplete{
+  width: 90%;
+  margin-top: -12px;
+  margin-left: 50px;
+}
+.autofill-box {
+  text-align: left;
+  padding-left: 50px;
+  margin-top: -2px;
+  display: block;
+  height: 50px;
+  width: 100%;
+  border: 2px solid grey;
+  font-size: 40px;
+  color: #999;
+  background-color: white;
+}
+.autofill-box:hover{
+  color: #333;
+}
